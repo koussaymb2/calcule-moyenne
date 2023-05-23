@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="./assets/js/calculer.js" defer></script>
+  </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+  <body class="h-full">
+    <header class="bg-[#DFD494]">
+      <nav class="flex flex-row justify-between items-center">
+        <img
+          src="./assets//images/essths.png"
+          alt="pic not found"
+          class="w-[25%] md:w-[10%]"
+        />
+        <h4 class="text-[#382F82] text-[20px] m-auto text-center w-auto font-bold">
+          École supérieure des sciences et de la technologiede Hammam Sousse
+        </h4>
+        <img src="./assets//images/us.png" alt="" class="w-[25%] md:w-[10%]" />
+      </nav>
+    </header>
+    <main class="h-full bg-[#FFF8D0]">
+      <h3 class="text-[#382F82] text-center text-[30px]">LI1</h3>
+
+      <form
+        class="flex justify-center items-center flex-col p-2 gap-[10px]"
+        id="myForm"
+      >
+        <!-- analyse -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            Analyse
+          </p>
+          <input 
+          min="0" max="20"
+            type="number"
+            id="exam-analyse"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-analyse"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="test-analyse"
+            placeholder="test"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- algebre -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            Algébre
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-algebre"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-algebre"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="test-algebre"
+            placeholder="test"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- algo -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            Algorithme
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-algo"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-algo"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="test-algo"
+            placeholder="test"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- C -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            C
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-c"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-c"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="tp-c"
+            placeholder="TP"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- python -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            Python
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-python"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-python"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="tp-python"
+            placeholder="tp"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- sys exploi -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-center text-[#382F82] text-[25px]">
+            Systèmes d’exploitation
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-exploi"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-exploi"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="tp-exploi"
+            placeholder="TP"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- reseau -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            Réseaux
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-reseau"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-reseau"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="tp-reseau"
+            placeholder="TP"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- base -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            base de données
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-base"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-base"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="test-base"
+            placeholder="test"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- tech de comm -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px] text-center">
+            Technique de Communication
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-tech-de-comm"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-tech-de-comm"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="test-tech-de-comm"
+            placeholder="test"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- anglais -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-2"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            Anglais
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-anglais"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-anglais"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="test-anglais"
+            placeholder="test"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <!-- c2i -->
+        <div
+          id="matiere"
+          class="flex flex-col w-[24%] gap-[10px] justify-center items-center border-b-2 border-b-[#382F82] p-4"
+        >
+          <p class="border-b-2 border-b-[#382F82] text-[#382F82] text-[25px]">
+            C2I
+          </p>
+          <input 
+            min="0" max="20"
+            type="number"
+            id="exam-culture"
+            placeholder="exam"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="ds-culture"
+            placeholder="ds"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+          <input 
+            min="0" max="20"
+            type="number"
+            id="test-culture"
+            placeholder="test"
+            class="rounded-full bg-[#D9D9D9] border-none placeholder:text-[#382F82] placeholder:text-[20px] w-[70vw] md:w-[70%]"
+          />
+        </div>
+
+        <button
+          class="bg-[#382F82] m-auto p-4 rounded-full text-white hover:bg-[#312E5F] font-bold"
+          id="calc"
+          type="submit"
+        >
+          Calculer votre moyenne
+        </button>
+      </form>
+      <p id="moy" class="text-center m-auto text-[35px] p-2 text-[#382F80] font-bold  "></p>
+    </main>
+  </body>
+</html>
